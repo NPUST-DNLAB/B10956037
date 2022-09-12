@@ -1,0 +1,93 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "dream" 
+
+
+enableRobotsTXT = true # 详见 Dream 作者 docs 目录下文档
+enableEmoji = true    
+hasCJKLanguage = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# https://gohugo.io/news/0.60.0-relnotes/
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+      # 缺省值为false，值为true时，md文件可使用html和js语法monokai
+
+    # 以下设置代码高亮样式
+    [markup.highlight]
+      codeFences = true
+      guessSyntax = true
+      hl_Lines = ""
+      lineNoStart = 1
+      lineNos = true
+      lineNumbersInTable = true
+      noClasses = true
+      style = "dracula"
+      tabWidth = 4
+ 
+[params]
+  background = "#fff"
+  backgroundImage = "https://marmotamaps.com/de/fx/wallpaper/download/faszinationen/Marmotamaps_Wallpaper_Berchtesgaden_Desktop_1920x1080.jpg"
+  linkColor = "seagreen"
+
+  # dark mode
+  # defaultDark = true
+  # backgroundDark = "#222"
+  backgroundImageDark = "https://marmotamaps.com/de/fx/wallpaper/download/faszinationen/Marmotamaps_Wallpaper_Berchtesgaden_Desktop_1920x1080.jpg"
+  darkLinkColor = "darkseagreen"
+  darkNav = true
+  dark404 = true
+
+  images = ["https://marmotamaps.com/de/fx/wallpaper/download/faszinationen/Marmotamaps_Wallpaper_Berchtesgaden_Desktop_1920x1080.jpg"]
+  author = "guole"
+  description = "guole 的生活记录~"
+  avatar = "/me/gl.png" # 设置头像
+  headerTitle = "guole's Blog"
+  motto = "保持理智，保持思考，相信明天。"
+  # maxTags = 5
+  # categoriesLimitInHeader = 6 # deprecated
+  # headerBottomText = "" # deprecated
+  # footerBottomText = ""
+  rss = true
+  # utterancesRepo = "kuole-o/kuole-o.github.io" # 一个国外评论系统，需要外网，我换了 Twikoo ，见其他文章
+
+  # 以下设置社交链接
+  # email = ""
+  # twitter = ""
+  # facebook = ""
+  # instagram = ""
+  # mastodon = ""
+  # linkedin = ""
+  # mastodon = ""
+  # linkedin = ""
+  # github = ""
+  # stackoverflow = ""
+  # codepen = ""
+
+  # 网站建站年份
+  siteStartYear = 2021
+
+  # 配置网站标签页上的 icon
+  # favicon = ""
+
+  # search
+  enableSearch = true
+
+  # options
+  showSummaryCoverInPost = true
+  # hasTwitterEmbed = true
+  # reversePostAndAside = true
+  # shareInAside = true
+
+  [params.advanced]
+    customCSS = ["css/custom.css"]
+    customJS = []
+  [params.experimental]
+    jsDate = true
+    jsDateFormat = "yyyy年MM月dd日"
+    # jsDateFormat = "yyyy年MM月dd日，cccc"
